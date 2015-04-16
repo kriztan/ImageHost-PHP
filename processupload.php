@@ -93,7 +93,7 @@ if(isset($_POST) && isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SER
 			echo '<br>';
 			echo '<h4>'.$info_link_to_image.'</h4><input id="link" type="text" readonly="readonly" onclick="this.select()" title="'.$info_select_and_copy_link.'" value="https://'.$_SERVER["HTTP_HOST"].'/'.$webpath.'/display/file/'.$image_file_name.'.'.$output_extension.'">';
 			echo '<br>';
-			echo '<h4>'.$info_link_to_delete_image.'</h4><input id="link" type="text" readonly="readonly" onclick="this.select()" title="'.$info_select_and_copy_link.'" value="https://'.$_SERVER["HTTP_HOST"].'/'.$webpath.'/delete.php?file='.$image_file_name.'.'.$output_extension.'">';
+			echo '<h4>'.$info_link_to_delete_image.'</h4><input id="link" type="text" readonly="readonly" onclick="this.select()" title="'.$info_select_and_copy_link.'" value="https://'.$_SERVER["HTTP_HOST"].'/'.$webpath.'/delete/file/'.$image_file_name.'.'.$output_extension.'">';
 			echo '</div>';
 		}
 		imagedestroy($image_res); //freeup memory
