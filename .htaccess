@@ -1,0 +1,6 @@
+RewriteEngine on
+#RULE REWRITEUSERFRIENDLYURL1 
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^display/file/?(.*) display.php?file=$1 [L]
+RewriteRule ^delete/file/?(.*) delete.php?file=$1 [L]
