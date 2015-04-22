@@ -2,13 +2,11 @@
 //load config
 include 'conf.php';
 // Get image string posted from Android App
-$base=$_REQUEST['image'];
+$image=$_POST['image'];
 
 if ($base){
-	// Decode Image
-	$binary=base64_decode($base);
-	
-	header('Content-Type: image/jpeg');
+	//Why setting Mime-Type?
+	//header('Content-Type: image/jpeg');
 	
 	//create a new filename with actual date/time and random number for new image
 	//Imagename: $image_name_only
@@ -25,7 +23,7 @@ if ($base){
 	// Images will be saved in folder
 	$file = fopen($image_save_folder, 'wb');
 	// Create File
-	fwrite($file, $binary);
+	fwrite($file, $image);
 	fclose($file);
 	// rework image
 	$im = imagecreatefromjpeg ($image_save_folder);
