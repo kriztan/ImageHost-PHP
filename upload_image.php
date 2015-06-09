@@ -30,7 +30,7 @@ if ($base){
 	// rework image
 	$im = imagecreatefromjpeg ($image_save_folder);
 	// interlace image
-	imageinterlace($im, true);
+	//imageinterlace($im, true);
 	// overwrite with new file
 	imagejpeg($im, $image_save_folder);
 	
@@ -102,7 +102,7 @@ function normal_resize_image($source, $destination, $image_type, $max_size, $ima
 function save_image($source, $destination, $image_type, $quality){
 	switch(strtolower($image_type)){//determine mime type
 		case 'image/png': case 'image/gif': case 'image/jpeg': case 'image/pjpeg': //case 'image/webp': 
-    	imageinterlace($source, true);
+    	//imageinterlace($source, true);
     	imagejpeg($source, $destination, $quality);
     	return true;
 			break;
